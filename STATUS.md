@@ -129,14 +129,15 @@ npm run shortcut:windows
 
 - **Repository:** https://github.com/3bud-ZC/RepoRadar-Ai.git
 - **Branch:** main
-- **Commit:** `baaf49764ca7d0b14f0e21457e9c27e65740babc`
-- **Message:** Release RepoRadar AI v0.2.0
-- **Files pushed:** 122 tracked files (440 objects)
+- **Initial commit:** `baaf49764ca7d0b14f0e21457e9c27e65740babc` — Release RepoRadar AI v0.2.0
+- **README polish commit:** `18b5df6f955ff92824dc1c848ec1a513de205283` — Polish README and finalize RepoRadar AI release
+- **Files pushed:** 122 tracked files
 - **Validation before push:** all passed (typecheck, build, 63 tests, pack dry-run)
 - **No secrets committed:** .env excluded, no API keys in source
+- **README.md:** polished with badges, professional sections, demo placeholder, full CLI table, all 13 outputs documented
 
 ## Recommended Next Step
 
-1. Add a screenshot or GIF to README.md (replace `docs/demo.gif` placeholder).
+1. Add a real demo GIF/screenshot to `docs/assets/demo.gif`.
 2. Publish a LinkedIn launch post linking to the repository.
 3. Run RepoRadar AI on a real project, open FIX_PLAN.md, then use GITHUB_ISSUES.md or AGENT_FIX_PROMPT.md to start improving that project.
