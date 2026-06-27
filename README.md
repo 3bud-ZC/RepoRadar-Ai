@@ -1,26 +1,33 @@
 # RepoRadar AI
 
-> Instant repository intelligence. No AI keys, no cloud, no database.
+> Turn any codebase into AI-ready project intelligence — without paid AI.
 
-RepoRadar AI is a deterministic CLI scanner that turns any codebase into structured reports, architecture docs, and AI-agent context in seconds. It runs entirely locally, requires zero configuration, and never sends your code to a third party.
+RepoRadar AI is a desktop-friendly and CLI-based developer tool that scans a codebase locally and generates structured project intelligence, architecture reports, security notes, fix plans, GitHub-ready issues, and AI-agent prompts. It runs entirely on your machine, requires zero API keys, and never sends your code to a third party.
 
-## Demo Preview
+<p align="center">
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white">
+  <img alt="Node.js" src="https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white">
+  <img alt="CLI Tool" src="https://img.shields.io/badge/CLI-Tool-000000?logo=windows-terminal&logoColor=white">
+  <img alt="MIT License" src="https://img.shields.io/badge/License-MIT-green.svg">
+  <img alt="No Paid AI" src="https://img.shields.io/badge/No%20Paid%20AI%20Required-ff6b6b">
+  <img alt="Tests" src="https://img.shields.io/badge/Tests-Passing-brightgreen">
+</p>
 
-**Best demo command**
+---
 
-```bash
-node dist/cli.js scan ./sample-project
-```
+## Demo
 
-**JSON output demo**
+![RepoRadar AI Demo](docs/assets/demo.gif)
 
-```bash
-node dist/cli.js scan ./sample-project --json
-```
+> A real demo GIF can be added later at `docs/assets/demo.gif`.
 
-> Screenshot/GIF capture instructions: Record your terminal running the command above, then scroll through the generated `PROJECT_REPORT.md` and `ARCHITECTURE.md`. Save the asset as `docs/demo.gif` and reference it below.
+**Best demo flow:**
 
-![Demo GIF placeholder](docs/demo.gif)
+1. Open RepoRadar AI from the desktop shortcut.
+2. Choose a project folder.
+3. Run scan.
+4. Open generated reports.
+5. Review `FIX_PLAN.md` and `AGENT_FIX_PROMPT.md`.
 
 *Demo outputs are already checked into the repo:*
 
@@ -38,28 +45,7 @@ node dist/cli.js scan ./sample-project --json
 - [GITHUB_ISSUES.md](examples/sample-project-output/GITHUB_ISSUES.md)
 - [AGENT_FIX_PROMPT.md](examples/sample-project-output/AGENT_FIX_PROMPT.md)
 
-## Why This Exists
-
-Repositories often have enough signal to produce strong project intelligence before adding any AI layer. RepoRadar AI focuses on deterministic scanning first so teams can:
-
-- understand an unfamiliar repo quickly
-- surface architecture and quality risks
-- produce reusable demo and onboarding outputs
-- prepare for future optional AI features without depending on them today
-
-## Features
-
-- Deterministic repo scanning with no paid AI required
-- CLI-first workflow for local projects
-- Project classification for frontend, backend, full-stack, CLI, library, and unknown repos
-- Alias-aware import resolution from `tsconfig`, `jsconfig`, Vite config, webpack-style alias hints, and package import maps
-- Expanded framework detection across modern JS/TS and Python ecosystems
-- Route detection across Express-style routers, Fastify, Next.js, React Router, Vue Router, Angular Router, Remix, Astro, SvelteKit, NestJS, FastAPI, Flask, and Django URL configs
-- Model and schema detection for Prisma, Drizzle, Zod, Mongoose, TypeORM, Sequelize, Django, Pydantic, SQLAlchemy-style patterns, SQL files, and Python dataclasses
-- Dependency graph summaries, package relationships, monorepo hints, and health endpoint detection
-- Generated reports for projects, architecture, tech stack, security notes, README drafting, AI-agent context, portfolio copy, and social-post copy
-- Actionable improvement outputs: FIX_PLAN.md, QUICK_WINS.md, GITHUB_ISSUES.md, and AGENT_FIX_PROMPT.md
-- Safe scan limits and explicit skipped-file reporting
+---
 
 ## Quick Start
 
@@ -69,36 +55,100 @@ npm run build
 node dist/cli.js scan ./sample-project
 ```
 
-For clean machine-readable JSON:
+**Desktop launcher:**
 
 ```bash
-node dist/cli.js scan ./sample-project --json
-```
-
-## CLI Usage
-
-```bash
-node dist/cli.js --help
-node dist/cli.js --version
-node dist/cli.js scan ./sample-project
-node dist/cli.js scan ./sample-project --json
-node dist/cli.js scan ./sample-project --output demo-output
-node dist/cli.js scan ./sample-project --config ./sample-project/reporadar.config.json
-node dist/cli.js init
 node dist/cli.js launch
 ```
 
-Notes:
+**Create Windows shortcut:**
 
-- `npm run dev -- scan ... --json` may include npm wrapper output around the CLI response.
-- `node dist/cli.js scan ./sample-project --json` emits clean JSON directly.
-- `init` creates a starter `reporadar.config.json` and will not overwrite an existing file unless `--force` is passed.
+```bash
+npm run shortcut:windows
+```
 
-## Desktop Launcher (Windows)
+**Clean JSON output:**
+
+```bash
+node dist/cli.js scan ./sample-project --json
+```
+
+---
+
+## What It Does
+
+RepoRadar AI scans any repository and produces a `.reporadar/` folder containing 13 structured outputs:
+
+| File | Purpose |
+|------|---------|
+| `repo-facts.json` | Full machine-readable scan facts |
+| `PROJECT_REPORT.md` | High-level project summary with health score |
+| `ARCHITECTURE.md` | Entrypoints, routes, layers, dependencies, and risks |
+| `TECH_STACK.md` | Languages, frameworks, ecosystem, and module-resolution signals |
+| `SECURITY_NOTES.md` | Security-oriented findings and cautions |
+| `README_SUGGESTION.md` | Draft structure for repo documentation |
+| `AI_AGENT_PROMPT.md` | Deterministic context for AI coding agents |
+| `LINKEDIN_POST.md` | Social-ready summary copy |
+| `PORTFOLIO_CASE_STUDY.md` | Portfolio-oriented project framing |
+| `FIX_PLAN.md` | Prioritized improvement plan with acceptance criteria |
+| `QUICK_WINS.md` | Low-effort, high-impact fixes you can do today |
+| `GITHUB_ISSUES.md` | Copy-paste ready GitHub issues with labels |
+| `AGENT_FIX_PROMPT.md` | Safe, focused prompt for AI coding agents |
+
+---
+
+## Why This Exists
+
+Developers often work with messy, undocumented, or unfamiliar repositories. AI coding agents also need clean project context before making safe changes.
+
+RepoRadar AI turns a repository into structured intelligence, actionable fix plans, copy-paste GitHub issues, and safe prompts for AI coding agents — all without paid AI.
+
+---
+
+## Features
+
+- **Local deterministic scanner** — no API keys, no cloud, no database
+- **Works without paid AI** — heuristic and regex-based detection
+- **Desktop launcher** — interactive folder picker and menu-driven workflow
+- **Windows shortcut support** — one-click desktop shortcut creation
+- **Project type detection** — frontend, backend, full-stack, CLI, library
+- **Tech stack detection** — frameworks, build tools, test runners
+- **Architecture detection** — routes, layers, entrypoints, data models
+- **Dependency graph summaries** — package relationships and monorepo hints
+- **Monorepo detection** — npm workspaces, pnpm workspaces, Turborepo
+- **Python and JavaScript/TypeScript support**
+- **Deployment signal detection** — Docker, PM2, GitHub Actions, Vercel, Netlify, Render, Railway
+- **Security notes without exposing secret values** — `.env` detected by name only
+- **Fix plan generator** — prioritized by severity with acceptance criteria
+- **Quick wins generator** — low-effort, high-impact improvements
+- **GitHub issue generator** — copy-paste ready with labels and checklists
+- **AI-agent prompt generator** — safe, focused prompts for coding agents
+- **LinkedIn and portfolio content generation** — social-ready project summaries
+
+---
+
+## CLI Commands
+
+| Command | Description |
+|---------|-------------|
+| `node dist/cli.js scan <path>` | Scan a project and generate all reports |
+| `node dist/cli.js scan <path> --json` | Scan and output clean JSON to stdout |
+| `node dist/cli.js scan <path> --output <dir>` | Write reports to a custom directory |
+| `node dist/cli.js scan <path> --config <path>` | Use a custom config file |
+| `node dist/cli.js init` | Create a starter `reporadar.config.json` |
+| `node dist/cli.js launch` | Open the interactive desktop launcher |
+| `node dist/cli.js --help` | Show help |
+| `node dist/cli.js --version` | Show version |
+
+> **Note:** `npm run dev -- scan ... --json` may include npm wrapper output. Use `node dist/cli.js scan ... --json` for clean JSON.
+
+---
+
+## Desktop Launcher
 
 RepoRadar AI includes an interactive launcher for Windows users who prefer a graphical folder picker and menu-driven workflow.
 
-### Create a Desktop Shortcut
+**Create a Desktop Shortcut:**
 
 ```bash
 npm install
@@ -108,13 +158,7 @@ npm run shortcut:windows
 
 This creates `RepoRadar AI.lnk` on your Desktop. Double-click it to launch the interactive picker.
 
-### Run Launcher Manually
-
-```bash
-node dist/cli.js launch
-```
-
-### What the Launcher Does
+**What the Launcher Does:**
 
 1. Shows a friendly menu in the terminal
 2. Lets you pick a folder using the Windows folder picker, or type a path manually
@@ -122,125 +166,159 @@ node dist/cli.js launch
 4. Shows the scan summary (project name, type, health score, generated files, top risks)
 5. Offers a post-scan menu to open the output folder or specific reports
 
-### Launcher Commands
-
-```bash
-# Interactive launcher (all platforms)
-node dist/cli.js launch
-
-# Windows PowerScript launcher
-npm run launcher:windows
-
-# Create Desktop shortcut (Windows)
-npm run shortcut:windows
-```
-
-### Troubleshooting
-
-- **Folder picker does not appear**: The launcher falls back to manual path entry automatically.
-- **Build missing**: The PowerShell launcher auto-runs `npm run build` if `dist/cli.js` is missing.
-- **Shortcut already exists**: Use `npm run shortcut:windows -- --Force` or delete the old shortcut first.
-
 See [docs/DESKTOP_LAUNCHER.md](docs/DESKTOP_LAUNCHER.md) for full details.
 
-## Config Example
-
-```json
-{
-  "projectName": "optional override",
-  "include": ["src/**"],
-  "exclude": ["generated/**", "vendor/**"],
-  "maxFiles": 5000,
-  "maxFileSizeKb": 512,
-  "reports": {
-    "project": true,
-    "architecture": true,
-    "techStack": true,
-    "security": true,
-    "readme": true,
-    "agentPrompt": true,
-    "linkedin": true,
-    "portfolio": true
-  },
-  "outputDir": ".reporadar"
-}
-```
+---
 
 ## Generated Outputs
 
 | File | Purpose |
-| --- | --- |
+|------|---------|
 | `repo-facts.json` | Full machine-readable scan facts |
 | `PROJECT_REPORT.md` | High-level project summary |
 | `ARCHITECTURE.md` | Entrypoints, routes, layers, dependencies, and risks |
-| `TECH_STACK.md` | Languages, frameworks, ecosystem and module-resolution signals |
+| `TECH_STACK.md` | Languages, frameworks, ecosystem signals |
 | `SECURITY_NOTES.md` | Security-oriented findings and cautions |
 | `README_SUGGESTION.md` | Draft structure for repo documentation |
-| `AI_AGENT_PROMPT.md` | Deterministic context for future agent workflows |
+| `AI_AGENT_PROMPT.md` | Deterministic context for AI coding agents |
 | `LINKEDIN_POST.md` | Social-ready summary copy |
 | `PORTFOLIO_CASE_STUDY.md` | Portfolio-oriented project framing |
+| `FIX_PLAN.md` | Prioritized improvement plan with acceptance criteria |
+| `QUICK_WINS.md` | Low-effort, high-impact fixes you can do today |
+| `GITHUB_ISSUES.md` | Copy-paste ready GitHub issues with labels |
+| `AGENT_FIX_PROMPT.md` | Safe, focused prompt for AI coding agents |
 
-## Demo
+*Example outputs:*
 
-The checked-in sample output set lives under [examples/sample-project-output](examples/sample-project-output).
+- [PROJECT_REPORT.md](examples/sample-project-output/PROJECT_REPORT.md)
+- [ARCHITECTURE.md](examples/sample-project-output/ARCHITECTURE.md)
+- [FIX_PLAN.md](examples/sample-project-output/FIX_PLAN.md)
+- [QUICK_WINS.md](examples/sample-project-output/QUICK_WINS.md)
+- [AGENT_FIX_PROMPT.md](examples/sample-project-output/AGENT_FIX_PROMPT.md)
 
-The example `repo-facts.json` is sanitized to avoid local absolute machine paths:
+---
 
-- `metadata.rootPath` is set to `<sample-project>`
-- `metadata.outputPath` is set to `<sample-project>/.reporadar`
+## Supported Detection
 
-Refresh the example set with:
+**JavaScript / TypeScript:**
+React, Next.js, Vite, Vue, Nuxt, Svelte, SvelteKit, Angular, Astro, Remix, SolidJS, Preact
 
-```bash
-npm run examples:refresh
+**Backend:**
+Express, Fastify, NestJS, Hono, Koa
+
+**Python:**
+FastAPI, Flask, Django, Typer, Click, Streamlit
+
+**Data & ORM:**
+Prisma, Drizzle ORM, Zod, Mongoose, Sequelize, TypeORM, PostgreSQL hints, Pydantic, SQLAlchemy-style patterns
+
+**Tooling & Deployment:**
+Docker, PM2, ESLint, Prettier, Vitest, Jest, Playwright, Cypress, Pytest, GitHub Actions, Vercel, Netlify, Render, Railway
+
+**Monorepos:**
+npm workspaces, pnpm workspaces, Turborepo
+
+---
+
+## Configuration
+
+Create a `reporadar.config.json` in your project root:
+
+```json
+{
+  "projectName": "My Project",
+  "include": ["src/**"],
+  "exclude": ["generated/**", "vendor/**"],
+  "maxFiles": 5000,
+  "maxFileSizeKb": 512,
+  "outputDir": ".reporadar",
+  "reports": {
+    "project": true,
+    "architecture": true,
+    "security": true,
+    "readme": true,
+    "agentPrompt": true,
+    "linkedin": true,
+    "portfolio": true,
+    "fixPlan": true,
+    "quickWins": true,
+    "githubIssues": true,
+    "agentFixPrompt": true
+  }
+}
 ```
 
-## Supported Ecosystems And Frameworks
+---
 
-- JavaScript and TypeScript: React, React Router, Vite, Next.js, Vue, Nuxt, Angular, Svelte, SvelteKit, Astro, Remix, SolidJS, Preact
-- Backend: Express, Fastify, Koa, NestJS, Hono
-- Python: FastAPI, Flask, Django, Typer, Click, Streamlit
-- Data and ORM: Prisma, Drizzle ORM, Zod, Mongoose, Sequelize, TypeORM, PostgreSQL hints
-- Tooling and release signals: Docker, PM2, ESLint, Prettier, Vitest, Jest, Playwright, Cypress, Pytest, GitHub Actions, Vercel, Netlify, Render, Railway
+## Validation
 
-## No Paid AI Required
+```bash
+npm audit
+npm run typecheck
+npm run build
+npm test
+npm run validate
+npm run pack:dry-run
+```
 
-RepoRadar AI is intentionally deterministic in the current phase. It does not require:
+---
 
-- an OpenAI key
-- any cloud AI provider
-- a hosted dashboard
-- a database
-- authentication
+## Safety & Privacy
 
-## Security And Privacy
+- RepoRadar AI runs entirely locally.
+- It does not require paid AI or API keys.
+- It does not send code to external APIs by default.
+- It does not print `.env` secret values.
+- Environment variables are detected by name only.
+- It generates advisory reports and does not automatically modify the scanned project.
 
-- RepoRadar AI never sends your code to a cloud service.
-- `.env` files are detected but their values are never printed into reports.
-- No secrets are extracted from scanned files.
-- Keep `reporadar.config.json` free of real credentials if you commit it.
+---
 
 ## Roadmap
 
-- Phase 3A: release candidate finalization and launch assets
-- Future deterministic work: deeper package-manager-specific resolution and more edge-case route coverage
-- Later optional work: local AI summaries and AI-assisted repo workflows (not required for launch)
+- [ ] Real demo GIF / screenshot
+- [ ] More framework coverage
+- [ ] Richer dependency graph ownership analysis
+- [ ] Optional local AI summaries with Ollama / LM Studio
+- [ ] Optional HTML report
+- [ ] Optional GitHub issue export automation
+
+---
 
 ## Limitations
 
-- Alias parsing is static and heuristic, so indirect runtime-computed aliases can still be missed.
-- Route and model detection are regex-driven and may underdetect unconventional patterns.
-- Dependency cycles are intentionally lightweight and limited to resolvable mutual-import hints.
-- The scanner is optimized for deterministic local signal, not runtime execution truth.
+- Detection is heuristic and regex-based.
+- Dynamic routes can be underdetected.
+- Runtime-generated aliases may be missed.
+- Generated code may be skipped or underdetected.
+- Direct `node` command is preferred for clean JSON output (`npm run dev --` may include wrapper output).
+
+---
+
+## Documentation
+
+- [CONTRIBUTING.md](CONTRIBUTING.md) — setup, tests, fixture guidance
+- [CHANGELOG.md](CHANGELOG.md) — version history
+- [docs/LAUNCH_CHECKLIST.md](docs/LAUNCH_CHECKLIST.md) — release checklist
+- [docs/DEMO_RECORDING_GUIDE.md](docs/DEMO_RECORDING_GUIDE.md) — how to record a demo
+- [docs/DESKTOP_LAUNCHER.md](docs/DESKTOP_LAUNCHER.md) — launcher details
+- [docs/FIX_PLAN_WORKFLOW.md](docs/FIX_PLAN_WORKFLOW.md) — how to use fix-plan outputs
+
+---
 
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for setup, test commands, fixture guidance, and project rules.
 
+---
+
 ## Changelog
 
 See [CHANGELOG.md](CHANGELOG.md) for version history.
 
+---
+
 ## License
 
 MIT
+
