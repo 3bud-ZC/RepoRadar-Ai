@@ -1,0 +1,8 @@
+{
+  "name": "@fixture/web-dashboard",
+  "version": "1.0.0",
+  "dependencies": {
+    "@fixture/shared-ui": "workspace:*",
+    "@fixture/data-client": "workspace:*"
+  }
+}

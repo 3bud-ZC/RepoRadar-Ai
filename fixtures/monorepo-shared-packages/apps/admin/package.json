@@ -1,0 +1,7 @@
+{
+  "name": "@fixture/admin-dashboard",
+  "version": "1.0.0",
+  "dependencies": {
+    "@fixture/shared-ui": "workspace:*"
+  }
+}

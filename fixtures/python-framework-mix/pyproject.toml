@@ -1,0 +1,4 @@
+[project]
+name = "python-framework-mix"
+version = "0.1.0"
+dependencies = ["typer", "pydantic"]

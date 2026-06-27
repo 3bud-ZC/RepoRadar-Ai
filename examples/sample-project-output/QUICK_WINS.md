@@ -1,0 +1,35 @@
+# Quick Wins: sample-project
+
+Low-effort, high-impact improvements you can apply today.
+
+## Summary
+
+- Total quick wins: 1
+- Health score: 91/100
+- Focus on the top 3 for the fastest visible improvement.
+
+## Top Quick Wins
+
+### RR-001: Add .dockerignore
+
+- **Estimated time:** 15 min
+- **Impact:** medium
+- **Category:** deployment
+- **Safe for agent:** Yes
+
+**Why it helps:**
+A Dockerfile exists but .dockerignore is missing. Build contexts can include node_modules, secrets, or local caches, making images larger and less secure.
+
+**What to do:**
+Add .dockerignore that excludes node_modules, .env, .git, build output, and local caches.
+
+**Suggested files:**
+- .dockerignore
+
+## How to Use This List
+
+1. Pick one item from the top.
+2. Open the suggested files.
+3. Apply the recommended fix.
+4. Run tests/build to verify.
+5. Commit and move to the next item.

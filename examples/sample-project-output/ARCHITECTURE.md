@@ -1,0 +1,120 @@
+# Architecture: sample-project
+
+## Architecture Summary
+
+| Key | Value |
+| --- | --- |
+| Project Type | full-stack-app |
+| Architecture Style | hybrid full-stack web application |
+| Entrypoints | 2 |
+| Routes | 1 |
+| Layers | 8 |
+| Important Files | 9 |
+| Health Endpoint | /health |
+| Alias Patterns | 0 |
+
+## Detected Project Style
+
+- Detected 2 likely entrypoint(s).
+- Detected 1 route or route-hint record(s).
+- Detected 1 lightweight import record(s).
+- No monorepo package relationships were expected.
+- Detected 0 alias pattern(s) from 1 config file(s).
+- Resolved 0 internal import(s); 0 remained unresolved.
+
+## Workspace Structure
+
+- Monorepo: no
+- Workspace manager: not detected
+- Apps: none
+- Packages: none
+- Services: none
+- Libraries: none
+
+## Entrypoints
+
+- src/main.tsx [frontend] - Common frontend bootstrap entrypoint.
+- server/index.ts [server] - Common backend server entrypoint.
+
+## Module Resolution
+
+- Alias config files: tsconfig.json
+- Alias patterns: none
+- Base paths: none
+- Detected 0 alias pattern(s) from 1 config file(s).
+- Resolved 0 internal import(s); 0 remained unresolved.
+
+## Layer Map
+
+- api: server/index.ts
+- backend: server/index.ts
+- config: package-lock.json, package.json, tsconfig.json, vite.config.ts
+- database: prisma/schema.prisma
+- deployment: Dockerfile, deploy.md
+- docs: README.md, deploy.md
+- frontend: src/main.tsx
+- tests: tests/app.test.ts
+
+## Routes And API Surface
+
+- GET /health (Express) in server/index.ts
+
+## Data Models
+
+- Project (Prisma) in prisma/schema.prisma
+
+## Environment Variable Names
+
+- None
+
+## Dependency Graph
+
+- Internal edges: 0
+- External packages: express
+- Top internal hubs: none
+- Top external packages: express (1)
+- Resolved 0 internal dependency edge(s).
+- Detected 1 unique external package import(s).
+- Cycle detection is limited to small resolvable mutual-import patterns.
+
+## High Fan-In Files
+
+- None
+
+## High Fan-Out Files
+
+- server/index.ts (1)
+
+## Possible Cycles
+
+- None
+
+## Package Relationships
+
+- None
+
+## Monorepo Package Graph
+
+- Shared packages: none
+- Orphan packages: none
+
+## Important Files
+
+- server/index.ts (score: 15; reasons: entrypoint, route surface, import hub)
+- prisma/schema.prisma (score: 11; reasons: important config, data model)
+- package.json (score: 10; reasons: root package config, important config)
+- Dockerfile (score: 9; reasons: important config, deployment file)
+- src/main.tsx (score: 8; reasons: entrypoint)
+- package-lock.json (score: 5; reasons: important config)
+- tsconfig.json (score: 5; reasons: important config)
+- vite.config.ts (score: 5; reasons: important config)
+- README.md (score: 4; reasons: root documentation)
+
+## Architecture Risks
+
+- WARNING: Docker build context may be noisy - A Dockerfile was detected without a matching .dockerignore file. Fix: Add .dockerignore to exclude node_modules, build output, secrets, and local caches from Docker builds.
+
+## Recommended Improvements
+
+1. Add .dockerignore so Docker builds exclude local dependencies, secrets, and generated files.
+2. Add .dockerignore to exclude node_modules, build output, secrets, and local caches from Docker builds.

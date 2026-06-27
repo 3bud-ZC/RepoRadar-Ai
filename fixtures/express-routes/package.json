@@ -1,0 +1,11 @@
+{
+  "name": "express-routes",
+  "private": true,
+  "scripts": {
+    "start": "node src/server.ts"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
+

@@ -1,0 +1,138 @@
+# Project Report: sample-project
+
+## Executive Summary
+
+- sample-project was classified as a full-stack-app.
+- RepoRadar AI detected Docker, ESLint, Express, Jest, Playwright, PostgreSQL, Prettier, Prisma, React, Tailwind CSS, Vite, Vitest across 15 scanned files.
+- The current deterministic health score is 91/100.
+
+## Project Snapshot
+
+| Key | Value |
+| --- | --- |
+| Project Name | sample-project |
+| Project Type | full-stack-app |
+| Package Manager | npm |
+| Files Scanned | 15 |
+| Skipped Files | 2 |
+| Skipped Folders | 1 |
+| Health Score | 91/100 |
+| Monorepo | No |
+
+## Config Summary
+
+- Config detected: no
+- Config path: not present
+- Output directory: .reporadar
+- Include patterns: default full-repo scan
+- Exclude patterns: .reporadar, .reporadar/**
+- Config warnings: none
+
+## Scan Safety Summary
+
+- Max files: 5000
+- Max file size: 512 KB
+- Skipped files: 2
+- Skipped folders: 1
+- Truncated: no
+- env file content intentionally skipped: 2
+- default ignored folder: 1
+
+## Detected Stack
+
+- Docker
+- ESLint
+- Express
+- Jest
+- Playwright
+- PostgreSQL
+- Prettier
+- Prisma
+- React
+- Tailwind CSS
+- Vite
+- Vitest
+
+## Framework Coverage Notes
+
+- Detected frameworks and tools: Docker, ESLint, Express, Jest, Playwright, PostgreSQL, Prettier, Prisma, React, Tailwind CSS, Vite, Vitest
+- Python frameworks: none
+- Architecture style: hybrid full-stack web application
+
+## Module Resolution
+
+- Alias config files: tsconfig.json
+- Alias patterns: none
+- Base paths: none
+- Detected 0 alias pattern(s) from 1 config file(s).
+- Resolved 0 internal import(s); 0 remained unresolved.
+
+## Monorepo Intelligence
+
+- Monorepo: no
+- Workspace manager: not detected
+- Apps: none
+- Packages: none
+- Services: none
+- Libraries: none
+
+## Dependency Graph Summary
+
+- Internal edges: 0
+- External packages: 1
+- Top external packages: express (1)
+- High fan-in files: none
+- High fan-out files: server/index.ts (1)
+- Resolved 0 internal dependency edge(s).
+- Detected 1 unique external package import(s).
+- Cycle detection is limited to small resolvable mutual-import patterns.
+
+## Route And Data Coverage
+
+- Route sources: Express
+- Detected routes: 1
+- Data model sources: Prisma
+- Detected data models: 1
+
+## Architecture Risks
+
+- WARNING: Docker build context may be noisy - A Dockerfile was detected without a matching .dockerignore file. Fix: Add .dockerignore to exclude node_modules, build output, secrets, and local caches from Docker builds.
+
+## Deployment Readiness
+
+- Deployment tools: Docker
+- Deployment platforms: none detected
+- Deployment docs present: yes
+- Health endpoint detected: /health
+- Docker packaging is present.
+
+## Health Score Breakdown
+
+- Documentation: 20/20
+- Structure: 20/20
+- Security: 16/20
+- Testing: 13/15
+- Deployment readiness: 13/15
+- AI-agent readiness: 9/10
+
+## Top Reasons For Lost Points
+
+- Dockerfile exists without .dockerignore protection. (-2)
+- No CI workflow was detected. (-2)
+- No CI/CD workflow was detected. (-2)
+
+## Actionable Outputs Generated
+
+- FIX_PLAN.md — prioritized improvement plan (2 items)
+- QUICK_WINS.md — low-effort, high-impact fixes
+- GITHUB_ISSUES.md — copy-paste ready GitHub issues
+- AGENT_FIX_PROMPT.md — prompt for AI coding agents to apply fixes safely
+
+## Key Issues
+
+- Dockerfile detected without .dockerignore.
+
+## Recommended Next Steps
+
+1. Add .dockerignore so Docker builds exclude local dependencies, secrets, and generated files.
+2. Add .dockerignore to exclude node_modules, build output, secrets, and local caches from Docker builds.

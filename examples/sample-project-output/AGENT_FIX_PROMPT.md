@@ -1,0 +1,45 @@
+# AI Agent Fix Prompt: sample-project
+
+> This prompt is for improving the **scanned project**, not RepoRadar AI itself.
+
+## Project Summary
+
+- Project name: sample-project
+- Project type: full-stack-app
+- Architecture: hybrid full-stack web application
+- Detected frameworks: Docker, ESLint, Express, Jest, Playwright, PostgreSQL, Prettier, Prisma, React, Tailwind CSS, Vite, Vitest
+- Languages: TypeScript, JSON, Markdown
+- Health score: 91/100
+- Files scanned: 15
+
+## Top Improvement Items
+
+1. RR-001: Add .dockerignore (warning) — Add .dockerignore that excludes node_modules, .env, .git, build output, and local caches.
+
+## Strict Constraints
+
+- Do NOT expose secrets or real credentials in any file you create or modify.
+- Do NOT overwrite user work without reading the existing file first.
+- If the project uses a STATUS.md workflow, maintain exactly one STATUS.md in the project root.
+- Run tests and build before reporting completion.
+- Update README.md when behavior changes.
+- Do NOT invent environment variable values. Use empty placeholders or mark them as required.
+- Do NOT modify files outside the scanned project scope.
+- Prefer small, focused changes over large rewrites.
+
+## Exact Task List
+
+1. Read the current project structure and key files.
+2. Pick the highest-priority safe-for-agent item from the Top Improvement Items list.
+3. Implement the recommended fix.
+4. Run npm run build to verify the project still builds.
+5. Run npm test to verify tests pass.
+6. Review your changes for secret exposure or unintended deletions.
+7. Report what was changed, why, and any remaining manual steps.
+
+## Expected Final Response
+
+- A summary of files changed.
+- A brief explanation of each change.
+- Build and test results (pass/fail).
+- Any remaining manual steps or open questions.

@@ -1,0 +1,8 @@
+{
+  "name": "fixture-library-package",
+  "private": true,
+  "scripts": {
+    "build": "tsup src/index.ts"
+  }
+}
+

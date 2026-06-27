@@ -1,0 +1,8 @@
+{
+  "name": "@fixture/web-links",
+  "private": true,
+  "dependencies": {
+    "@fixture/ui-kit": "workspace:*"
+  }
+}
+

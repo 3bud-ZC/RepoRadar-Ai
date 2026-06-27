@@ -1,0 +1,2 @@
+# Frontend Vite React Fixture
+

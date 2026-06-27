@@ -1,0 +1,1 @@
+export const invalidConfigFixture = "fallback";

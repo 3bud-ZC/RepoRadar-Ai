@@ -1,0 +1,2 @@
+# Monorepo NPM Workspaces Fixture
+

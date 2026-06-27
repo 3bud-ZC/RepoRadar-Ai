@@ -1,0 +1,12 @@
+{
+  "projectName": "Configured Fixture",
+  "include": ["src/**", "package.json", "README.md", "reporadar.config.json"],
+  "exclude": ["src/generated/**"],
+  "maxFiles": 200,
+  "maxFileSizeKb": 64,
+  "reports": {
+    "linkedin": false,
+    "portfolio": false
+  },
+  "outputDir": ".custom-radar"
+}

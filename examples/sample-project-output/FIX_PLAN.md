@@ -1,0 +1,70 @@
+# Fix Plan: sample-project
+
+## Executive Summary
+
+- Total improvement items: 2
+- Critical: 0
+- Warnings: 1
+- Info: 1
+- Health score: 91/100
+
+## Priority Order
+
+1. Address all critical items first
+2. Address warning items next
+3. Apply info items when convenient
+4. Validate changes by running tests/build
+
+## Warnings
+
+### RR-001: Add .dockerignore
+
+- **Severity:** WARNING
+- **Category:** deployment
+- **Effort:** Low effort
+- **Impact:** Medium impact
+- **Safe for agent:** Yes
+
+#### Problem
+A Dockerfile exists but .dockerignore is missing. Build contexts can include node_modules, secrets, or local caches, making images larger and less secure.
+
+#### Recommended Fix
+Add .dockerignore that excludes node_modules, .env, .git, build output, and local caches.
+
+#### Acceptance Criteria
+1. .dockerignore exists
+2. node_modules and local build artifacts are excluded
+3. .env files are excluded
+
+#### Suggested Files
+- .dockerignore
+
+## Improvements
+
+### RR-002: Review high fan-out file: server/index.ts
+
+- **Severity:** INFO
+- **Category:** architecture
+- **Effort:** High effort
+- **Impact:** Medium impact
+- **Safe for agent:** Review manually first
+
+#### Problem
+The file server/index.ts imports from 1 other internal files, which may indicate it has too many responsibilities.
+
+#### Recommended Fix
+Consider extracting cohesive groups of imports into separate modules or introducing an intermediate layer. Do not refactor unless behavior is well tested.
+
+#### Acceptance Criteria
+1. Responsibilities are clearly separated or documented
+2. Tests pass after any refactoring
+
+#### Suggested Files
+- server/index.ts
+
+## Safe AI-Agent Notes
+
+- Items marked 'Safe for agent: Yes' can be handed to an AI coding agent.
+- Items marked 'Review manually first' may require human judgment before automation.
+- Always run tests and builds after any automated changes.
+- Never expose secrets or real credentials in generated files.

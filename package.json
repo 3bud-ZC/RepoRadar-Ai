@@ -1,0 +1,80 @@
+{
+  "name": "reporadar-ai",
+  "version": "0.2.0",
+  "description": "Deterministic CLI scanner that turns any codebase into structured reports, architecture docs, and AI-agent context without cloud AI.",
+  "license": "MIT",
+  "author": "Abud",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abud/reporadar-ai.git"
+  },
+  "bugs": {
+    "url": "https://github.com/abud/reporadar-ai/issues"
+  },
+  "homepage": "https://github.com/abud/reporadar-ai#readme",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "examples",
+    "docs",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "README.md"
+  ],
+  "bin": {
+    "reporadar": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./cli": {
+      "default": "./dist/cli.js"
+    }
+  },
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "tsx src/cli.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/cli.js",
+    "clean": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "validate": "npm run typecheck && npm run build && npm test",
+    "examples:refresh": "tsx scripts/refresh-examples.ts",
+    "pack:dry-run": "npm pack --dry-run",
+    "prepublishOnly": "npm run validate && npm run pack:dry-run",
+    "launcher": "node dist/cli.js launch",
+    "shortcut:windows": "powershell -ExecutionPolicy Bypass -File scripts/windows/create-desktop-shortcut.ps1",
+    "launcher:windows": "powershell -ExecutionPolicy Bypass -File scripts/windows/launch-reporadar.ps1"
+  },
+  "keywords": [
+    "cli",
+    "code-analysis",
+    "developer-tools",
+    "repository-intelligence",
+    "typescript",
+    "repository-scanner",
+    "architecture-analysis",
+    "dependency-graph",
+    "tech-stack",
+    "cli-ux",
+    "project-intelligence"
+  ],
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "dependencies": {
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "vitest": "^4.1.9"
+  }
+}

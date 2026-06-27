@@ -1,0 +1,14 @@
+{
+  "name": "fixture-cli-tool",
+  "private": true,
+  "bin": {
+    "fixture-cli": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "commander": "^12.1.0"
+  }
+}
+

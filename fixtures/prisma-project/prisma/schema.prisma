@@ -1,0 +1,14 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id Int @id @default(autoincrement())
+  email String
+}
+
+model Report {
+  id Int @id @default(autoincrement())
+  title String
+}
+

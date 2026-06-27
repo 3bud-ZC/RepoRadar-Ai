@@ -1,0 +1,458 @@
+{
+  "metadata": {
+    "scannedAt": "2026-06-27T16:49:11.957Z",
+    "projectName": "Configured Fixture",
+    "rootPath": "C:\\Users\\Abud\\Desktop\\GitHub\\RepoRadar Ai\\fixtures\\config-custom-output",
+    "outputPath": "C:\\Users\\Abud\\Desktop\\GitHub\\RepoRadar Ai\\fixtures\\config-custom-output\\.custom-radar",
+    "totalFilesScanned": 4,
+    "mainFolders": [
+      "src"
+    ],
+    "importantConfigFiles": [
+      "package.json",
+      "reporadar.config.json"
+    ],
+    "generatedFiles": [
+      "repo-facts.json",
+      "PROJECT_REPORT.md",
+      "ARCHITECTURE.md",
+      "TECH_STACK.md",
+      "SECURITY_NOTES.md",
+      "README_SUGGESTION.md",
+      "AI_AGENT_PROMPT.md"
+    ]
+  },
+  "config": {
+    "configDetected": true,
+    "configPath": "C:\\Users\\Abud\\Desktop\\GitHub\\RepoRadar Ai\\fixtures\\config-custom-output\\reporadar.config.json",
+    "configWarnings": [],
+    "appliedIncludePatterns": [
+      "src/**",
+      "package.json",
+      "README.md",
+      "reporadar.config.json"
+    ],
+    "appliedExcludePatterns": [
+      "src/generated/**",
+      ".custom-radar",
+      ".custom-radar/**"
+    ],
+    "outputDir": ".custom-radar",
+    "maxFiles": 200,
+    "maxFileSizeKb": 64,
+    "reports": {
+      "project": true,
+      "architecture": true,
+      "techStack": true,
+      "security": true,
+      "readme": true,
+      "agentPrompt": true,
+      "linkedin": false,
+      "portfolio": false
+    }
+  },
+  "scanSafety": {
+    "maxFiles": 200,
+    "maxFileSizeKb": 64,
+    "skippedFiles": 0,
+    "skippedFolders": 1,
+    "skippedReasons": [
+      {
+        "reason": "default ignored folder",
+        "count": 1
+      }
+    ],
+    "truncated": false
+  },
+  "detectedLanguages": [
+    {
+      "name": "JSON",
+      "fileCount": 2
+    },
+    {
+      "name": "Markdown",
+      "fileCount": 1
+    },
+    {
+      "name": "TypeScript",
+      "fileCount": 1
+    }
+  ],
+  "detectedFrameworks": [],
+  "packageManager": null,
+  "projectType": "unknown",
+  "monorepo": {
+    "isMonorepo": false,
+    "workspaceManager": null,
+    "workspaceGlobs": [],
+    "detectedApps": [],
+    "detectedPackages": [],
+    "detectedServices": [],
+    "detectedLibraries": [],
+    "monorepoTools": [],
+    "monorepoNotes": [],
+    "packageGraph": null
+  },
+  "ecosystems": {
+    "primary": [
+      "Node.js"
+    ],
+    "python": {
+      "detected": false,
+      "packageFiles": [],
+      "dependencyFiles": [],
+      "frameworks": [],
+      "testingTools": [],
+      "usesSrcLayout": true,
+      "hasPytestConfig": false
+    }
+  },
+  "deployment": {
+    "tools": [],
+    "configFiles": [],
+    "platforms": [],
+    "hasDockerfile": false,
+    "hasDockerCompose": false,
+    "hasDockerIgnore": false,
+    "hasNginxConfig": false,
+    "hasPm2Config": false,
+    "notes": [
+      "No deployment tooling was detected by the current heuristics."
+    ]
+  },
+  "ci": {
+    "providers": [],
+    "workflowFiles": []
+  },
+  "packageSummary": {
+    "hasRootPackageJson": true,
+    "hasRootPyprojectToml": false,
+    "hasRequirementsTxt": false,
+    "hasSetupPy": false,
+    "hasSetupCfg": false,
+    "hasPipfile": false,
+    "hasPoetryLock": false,
+    "hasRootLockfile": false,
+    "workspacePackageCount": 0,
+    "appCount": 0,
+    "packageCount": 0,
+    "serviceCount": 0,
+    "libraryCount": 0,
+    "hasSharedConfigPackage": false
+  },
+  "architecture": {
+    "entrypoints": [
+      {
+        "file": "src/index.ts",
+        "kind": "script-dev",
+        "reason": "Detected from package.json `dev` script.",
+        "confidence": 0.9
+      },
+      {
+        "file": "src/index.ts",
+        "kind": "code",
+        "reason": "Common source entrypoint file.",
+        "confidence": 0.95
+      }
+    ],
+    "routes": [],
+    "imports": [
+      {
+        "file": "src/index.ts",
+        "target": "node:http",
+        "kind": "import",
+        "internal": false
+      }
+    ],
+    "layers": [
+      {
+        "name": "config",
+        "files": [
+          "package.json",
+          "reporadar.config.json"
+        ]
+      },
+      {
+        "name": "docs",
+        "files": [
+          "README.md"
+        ]
+      },
+      {
+        "name": "unknown",
+        "files": [
+          "src/index.ts"
+        ]
+      }
+    ],
+    "dataModels": [],
+    "envUsage": [],
+    "packageRelationships": [],
+    "importantFiles": [
+      {
+        "file": "src/index.ts",
+        "score": 17,
+        "reasons": [
+          "entrypoint",
+          "import hub"
+        ]
+      },
+      {
+        "file": "package.json",
+        "score": 10,
+        "reasons": [
+          "root package config",
+          "important config"
+        ]
+      },
+      {
+        "file": "reporadar.config.json",
+        "score": 5,
+        "reasons": [
+          "important config"
+        ]
+      },
+      {
+        "file": "README.md",
+        "score": 4,
+        "reasons": [
+          "root documentation"
+        ]
+      }
+    ],
+    "architectureStyle": "unknown",
+    "notes": [
+      "Detected 2 likely entrypoint(s).",
+      "Detected 0 route or route-hint record(s).",
+      "Detected 1 lightweight import record(s).",
+      "No monorepo package relationships were expected."
+    ]
+  },
+  "dependencyGraph": {
+    "internalEdges": [],
+    "externalPackages": [
+      "node:http"
+    ],
+    "topImportedExternalPackages": [
+      {
+        "packageName": "node:http",
+        "count": 1
+      }
+    ],
+    "topImportedInternalFiles": [],
+    "highFanInFiles": [],
+    "highFanOutFiles": [
+      {
+        "file": "src/index.ts",
+        "count": 1
+      }
+    ],
+    "possibleCycles": [],
+    "notes": [
+      "Resolved 0 internal dependency edge(s).",
+      "Detected 1 unique external package import(s).",
+      "Cycle detection is limited to small resolvable mutual-import patterns."
+    ]
+  },
+  "architectureRisks": [],
+  "hasHealthEndpoint": false,
+  "detectedHealthRoutes": [],
+  "qualitySignals": {
+    "hasReadme": true,
+    "hasLicense": false,
+    "hasEnvExample": false,
+    "hasTests": false,
+    "hasTypeScriptConfig": false,
+    "hasLintScript": false,
+    "hasBuildScript": false,
+    "hasStartScript": false,
+    "hasDevScript": true,
+    "hasDockerfile": false,
+    "hasDeploymentDocs": false,
+    "hasCiWorkflow": false,
+    "hasWorkspaceConfig": false,
+    "hasRootLockfile": false
+  },
+  "securitySignals": {
+    "envFilesDetected": [],
+    "envIgnoredInGitignore": false,
+    "envRiskWarning": false,
+    "possibleHardcodedSecrets": []
+  },
+  "healthScore": 25,
+  "healthBreakdown": {
+    "documentation": 8,
+    "structure": 0,
+    "security": 14,
+    "testing": 0,
+    "deploymentReadiness": 0,
+    "aiReadiness": 3
+  },
+  "healthDetails": {
+    "maxScore": 100,
+    "categoryMaxScores": {
+      "documentation": 20,
+      "structure": 20,
+      "security": 20,
+      "testing": 15,
+      "deploymentReadiness": 15,
+      "aiReadiness": 10
+    },
+    "penalties": [
+      {
+        "category": "documentation",
+        "pointsLost": 4,
+        "reason": "License file is missing.",
+        "recommendedFix": "Add a LICENSE file or document licensing clearly."
+      },
+      {
+        "category": "documentation",
+        "pointsLost": 4,
+        "reason": "Deployment documentation was not detected.",
+        "recommendedFix": "Add deployment or release instructions such as deploy.md, render.yaml, or vercel.json."
+      },
+      {
+        "category": "documentation",
+        "pointsLost": 4,
+        "reason": ".env.example was not found.",
+        "recommendedFix": "Add .env.example with placeholder values for required configuration."
+      },
+      {
+        "category": "structure",
+        "pointsLost": 5,
+        "reason": "No primary project configuration file was detected.",
+        "recommendedFix": "Add tsconfig.json, pyproject.toml, setup.py, or setup.cfg so tooling can understand the project structure."
+      },
+      {
+        "category": "structure",
+        "pointsLost": 4,
+        "reason": "No lint script was detected.",
+        "recommendedFix": "Add a lint script so quality checks are repeatable."
+      },
+      {
+        "category": "structure",
+        "pointsLost": 4,
+        "reason": "No build script was detected.",
+        "recommendedFix": "Add a build script for reliable packaging or deployment."
+      },
+      {
+        "category": "structure",
+        "pointsLost": 2,
+        "reason": "No start script was detected.",
+        "recommendedFix": "Add a start script when the project has a runnable runtime entrypoint."
+      },
+      {
+        "category": "structure",
+        "pointsLost": 2,
+        "reason": "No major framework or tooling hints were detected.",
+        "recommendedFix": "Add clearer dependency, config, or entrypoint metadata so the scanner can classify the repo accurately."
+      },
+      {
+        "category": "security",
+        "pointsLost": 4,
+        "reason": ".env files are not clearly protected by .gitignore.",
+        "recommendedFix": "Add .env or .env* ignore rules to .gitignore."
+      },
+      {
+        "category": "security",
+        "pointsLost": 2,
+        "reason": "Safe environment variable documentation is missing.",
+        "recommendedFix": "Add .env.example with placeholder values only."
+      },
+      {
+        "category": "testing",
+        "pointsLost": 10,
+        "reason": "No automated tests were detected.",
+        "recommendedFix": "Add unit or smoke tests for critical flows."
+      },
+      {
+        "category": "testing",
+        "pointsLost": 5,
+        "reason": "No dedicated testing tool was detected.",
+        "recommendedFix": "Add Vitest, Jest, Playwright, Cypress, or Pytest depending on project shape."
+      },
+      {
+        "category": "testing",
+        "pointsLost": 2,
+        "reason": "No CI workflow was detected.",
+        "recommendedFix": "Add CI automation such as GitHub Actions to run tests consistently."
+      },
+      {
+        "category": "deploymentReadiness",
+        "pointsLost": 7,
+        "reason": "No clear deployment target or Docker packaging was detected.",
+        "recommendedFix": "Add a Dockerfile or platform config such as vercel.json, netlify.toml, render.yaml, or railway.json."
+      },
+      {
+        "category": "deploymentReadiness",
+        "pointsLost": 4,
+        "reason": "Build automation is missing.",
+        "recommendedFix": "Add a build script so release artifacts can be produced consistently."
+      },
+      {
+        "category": "deploymentReadiness",
+        "pointsLost": 2,
+        "reason": "Runtime start command is missing.",
+        "recommendedFix": "Add a start script or document the runtime entrypoint clearly."
+      },
+      {
+        "category": "deploymentReadiness",
+        "pointsLost": 2,
+        "reason": "Deployment docs or config were not detected.",
+        "recommendedFix": "Add deployment guidance or CI/CD configuration."
+      },
+      {
+        "category": "deploymentReadiness",
+        "pointsLost": 2,
+        "reason": "No CI/CD workflow was detected.",
+        "recommendedFix": "Add CI workflows for build, test, or release automation."
+      },
+      {
+        "category": "aiReadiness",
+        "pointsLost": 2,
+        "reason": "Project typing/config context is limited.",
+        "recommendedFix": "Add or improve configuration files that define source layout and compiler/runtime expectations."
+      },
+      {
+        "category": "aiReadiness",
+        "pointsLost": 2,
+        "reason": "The stack is hard to infer from repo evidence.",
+        "recommendedFix": "Add clearer dependencies and configuration so tools can classify the repository."
+      },
+      {
+        "category": "aiReadiness",
+        "pointsLost": 1,
+        "reason": "No build script is available for agent-driven validation.",
+        "recommendedFix": "Add a build script agents can run safely."
+      },
+      {
+        "category": "aiReadiness",
+        "pointsLost": 2,
+        "reason": "Open repo issues reduce autonomous task confidence.",
+        "recommendedFix": "Address the highest-priority issues before adding AI workflows."
+      },
+      {
+        "category": "structure",
+        "pointsLost": 3,
+        "reason": "No root lockfile was detected.",
+        "recommendedFix": "Commit a lockfile at the repository root for reproducible installs."
+      }
+    ]
+  },
+  "issues": [
+    "No tests detected.",
+    "No lint script found in package.json.",
+    "No build script found in package.json.",
+    "No root lockfile detected for dependency reproducibility.",
+    "No major frameworks or tooling detected.",
+    "Project type could not be confidently inferred.",
+    "No deployment or CI signals were detected."
+  ],
+  "recommendedNextSteps": [
+    "Add smoke tests or unit tests to increase confidence in future scans.",
+    "Add .env.example to document required environment variables safely.",
+    "Commit a root lockfile to make dependency installs reproducible.",
+    "Add clearer scripts, docs, or config files so project type becomes easier to infer.",
+    "Add deployment config, CI workflows, or deployment docs to improve release readiness."
+  ]
+}

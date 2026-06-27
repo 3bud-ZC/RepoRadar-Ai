@@ -1,0 +1,537 @@
+{
+  "metadata": {
+    "scannedAt": "2026-06-27T21:12:12.324Z",
+    "projectName": "sample-project",
+    "rootPath": "<sample-project>",
+    "outputPath": "<sample-project>/.reporadar",
+    "totalFilesScanned": 15,
+    "mainFolders": [
+      "prisma",
+      "server",
+      "src",
+      "tests"
+    ],
+    "importantConfigFiles": [
+      "package.json",
+      "package-lock.json",
+      "tsconfig.json",
+      "vite.config.ts",
+      "Dockerfile",
+      "prisma/schema.prisma"
+    ],
+    "generatedFiles": [
+      "repo-facts.json",
+      "PROJECT_REPORT.md",
+      "ARCHITECTURE.md",
+      "TECH_STACK.md",
+      "SECURITY_NOTES.md",
+      "README_SUGGESTION.md",
+      "AI_AGENT_PROMPT.md",
+      "LINKEDIN_POST.md",
+      "PORTFOLIO_CASE_STUDY.md",
+      "FIX_PLAN.md",
+      "QUICK_WINS.md",
+      "GITHUB_ISSUES.md",
+      "AGENT_FIX_PROMPT.md"
+    ]
+  },
+  "config": {
+    "configDetected": false,
+    "configPath": null,
+    "configWarnings": [],
+    "appliedIncludePatterns": [],
+    "appliedExcludePatterns": [
+      ".reporadar",
+      ".reporadar/**"
+    ],
+    "outputDir": ".reporadar",
+    "maxFiles": 5000,
+    "maxFileSizeKb": 512,
+    "reports": {
+      "project": true,
+      "architecture": true,
+      "techStack": true,
+      "security": true,
+      "readme": true,
+      "agentPrompt": true,
+      "linkedin": true,
+      "portfolio": true,
+      "fixPlan": true,
+      "quickWins": true,
+      "githubIssues": true,
+      "agentFixPrompt": true
+    }
+  },
+  "scanSafety": {
+    "maxFiles": 5000,
+    "maxFileSizeKb": 512,
+    "skippedFiles": 2,
+    "skippedFolders": 1,
+    "skippedReasons": [
+      {
+        "reason": "env file content intentionally skipped",
+        "count": 2
+      },
+      {
+        "reason": "default ignored folder",
+        "count": 1
+      }
+    ],
+    "truncated": false
+  },
+  "detectedLanguages": [
+    {
+      "name": "TypeScript",
+      "fileCount": 4
+    },
+    {
+      "name": "JSON",
+      "fileCount": 3
+    },
+    {
+      "name": "Markdown",
+      "fileCount": 2
+    }
+  ],
+  "detectedFrameworks": [
+    "Docker",
+    "ESLint",
+    "Express",
+    "Jest",
+    "Playwright",
+    "PostgreSQL",
+    "Prettier",
+    "Prisma",
+    "React",
+    "Tailwind CSS",
+    "Vite",
+    "Vitest"
+  ],
+  "packageManager": "npm",
+  "projectType": "full-stack-app",
+  "monorepo": {
+    "isMonorepo": false,
+    "workspaceManager": null,
+    "workspaceGlobs": [],
+    "detectedApps": [],
+    "detectedPackages": [],
+    "detectedServices": [],
+    "detectedLibraries": [],
+    "monorepoTools": [],
+    "monorepoNotes": [],
+    "packageGraph": null
+  },
+  "ecosystems": {
+    "primary": [
+      "Node.js"
+    ],
+    "python": {
+      "detected": false,
+      "packageFiles": [],
+      "dependencyFiles": [],
+      "frameworks": [],
+      "testingTools": [],
+      "usesSrcLayout": true,
+      "hasPytestConfig": false
+    }
+  },
+  "deployment": {
+    "tools": [
+      "Docker"
+    ],
+    "configFiles": [
+      "Dockerfile"
+    ],
+    "platforms": [],
+    "hasDockerfile": true,
+    "hasDockerCompose": false,
+    "hasDockerIgnore": false,
+    "hasNginxConfig": false,
+    "hasPm2Config": false,
+    "notes": [
+      "Docker packaging is present."
+    ]
+  },
+  "ci": {
+    "providers": [],
+    "workflowFiles": []
+  },
+  "packageSummary": {
+    "hasRootPackageJson": true,
+    "hasRootPyprojectToml": false,
+    "hasRequirementsTxt": false,
+    "hasSetupPy": false,
+    "hasSetupCfg": false,
+    "hasPipfile": false,
+    "hasPoetryLock": false,
+    "hasRootLockfile": true,
+    "workspacePackageCount": 0,
+    "appCount": 0,
+    "packageCount": 0,
+    "serviceCount": 0,
+    "libraryCount": 0,
+    "hasSharedConfigPackage": false
+  },
+  "architecture": {
+    "entrypoints": [
+      {
+        "file": "src/main.tsx",
+        "kind": "frontend",
+        "reason": "Common frontend bootstrap entrypoint.",
+        "confidence": 0.95
+      },
+      {
+        "file": "server/index.ts",
+        "kind": "server",
+        "reason": "Common backend server entrypoint.",
+        "confidence": 0.95
+      }
+    ],
+    "routes": [
+      {
+        "method": "GET",
+        "path": "/health",
+        "file": "server/index.ts",
+        "source": "Express",
+        "confidence": 0.95
+      }
+    ],
+    "imports": [
+      {
+        "file": "server/index.ts",
+        "target": "express",
+        "kind": "import",
+        "internal": false
+      }
+    ],
+    "moduleResolution": {
+      "aliases": [],
+      "basePaths": [],
+      "configFiles": [
+        "tsconfig.json"
+      ],
+      "resolvedInternalImports": 0,
+      "unresolvedInternalImports": 0,
+      "aliasResolvedImports": 0,
+      "relativeResolvedImports": 0,
+      "baseUrlResolvedImports": 0,
+      "notes": [
+        "Detected 0 alias pattern(s) from 1 config file(s).",
+        "Resolved 0 internal import(s); 0 remained unresolved."
+      ]
+    },
+    "layers": [
+      {
+        "name": "api",
+        "files": [
+          "server/index.ts"
+        ]
+      },
+      {
+        "name": "backend",
+        "files": [
+          "server/index.ts"
+        ]
+      },
+      {
+        "name": "config",
+        "files": [
+          "package-lock.json",
+          "package.json",
+          "tsconfig.json",
+          "vite.config.ts"
+        ]
+      },
+      {
+        "name": "database",
+        "files": [
+          "prisma/schema.prisma"
+        ]
+      },
+      {
+        "name": "deployment",
+        "files": [
+          "Dockerfile",
+          "deploy.md"
+        ]
+      },
+      {
+        "name": "docs",
+        "files": [
+          "README.md",
+          "deploy.md"
+        ]
+      },
+      {
+        "name": "frontend",
+        "files": [
+          "src/main.tsx"
+        ]
+      },
+      {
+        "name": "tests",
+        "files": [
+          "tests/app.test.ts"
+        ]
+      }
+    ],
+    "dataModels": [
+      {
+        "name": "Project",
+        "source": "Prisma",
+        "file": "prisma/schema.prisma",
+        "confidence": 0.95
+      }
+    ],
+    "envUsage": [],
+    "packageRelationships": [],
+    "importantFiles": [
+      {
+        "file": "server/index.ts",
+        "score": 15,
+        "reasons": [
+          "entrypoint",
+          "route surface",
+          "import hub"
+        ]
+      },
+      {
+        "file": "prisma/schema.prisma",
+        "score": 11,
+        "reasons": [
+          "important config",
+          "data model"
+        ]
+      },
+      {
+        "file": "package.json",
+        "score": 10,
+        "reasons": [
+          "root package config",
+          "important config"
+        ]
+      },
+      {
+        "file": "Dockerfile",
+        "score": 9,
+        "reasons": [
+          "important config",
+          "deployment file"
+        ]
+      },
+      {
+        "file": "src/main.tsx",
+        "score": 8,
+        "reasons": [
+          "entrypoint"
+        ]
+      },
+      {
+        "file": "package-lock.json",
+        "score": 5,
+        "reasons": [
+          "important config"
+        ]
+      },
+      {
+        "file": "tsconfig.json",
+        "score": 5,
+        "reasons": [
+          "important config"
+        ]
+      },
+      {
+        "file": "vite.config.ts",
+        "score": 5,
+        "reasons": [
+          "important config"
+        ]
+      },
+      {
+        "file": "README.md",
+        "score": 4,
+        "reasons": [
+          "root documentation"
+        ]
+      }
+    ],
+    "architectureStyle": "hybrid full-stack web application",
+    "notes": [
+      "Detected 2 likely entrypoint(s).",
+      "Detected 1 route or route-hint record(s).",
+      "Detected 1 lightweight import record(s).",
+      "No monorepo package relationships were expected.",
+      "Detected 0 alias pattern(s) from 1 config file(s).",
+      "Resolved 0 internal import(s); 0 remained unresolved."
+    ]
+  },
+  "dependencyGraph": {
+    "internalEdges": [],
+    "externalPackages": [
+      "express"
+    ],
+    "topImportedExternalPackages": [
+      {
+        "packageName": "express",
+        "count": 1
+      }
+    ],
+    "topImportedInternalFiles": [],
+    "highFanInFiles": [],
+    "highFanOutFiles": [
+      {
+        "file": "server/index.ts",
+        "count": 1
+      }
+    ],
+    "possibleCycles": [],
+    "notes": [
+      "Resolved 0 internal dependency edge(s).",
+      "Detected 1 unique external package import(s).",
+      "Cycle detection is limited to small resolvable mutual-import patterns."
+    ]
+  },
+  "architectureRisks": [
+    {
+      "severity": "warning",
+      "title": "Docker build context may be noisy",
+      "detail": "A Dockerfile was detected without a matching .dockerignore file.",
+      "suggestedFix": "Add .dockerignore to exclude node_modules, build output, secrets, and local caches from Docker builds."
+    }
+  ],
+  "hasHealthEndpoint": true,
+  "detectedHealthRoutes": [
+    "/health"
+  ],
+  "qualitySignals": {
+    "hasReadme": true,
+    "hasLicense": true,
+    "hasEnvExample": true,
+    "hasTests": true,
+    "hasTypeScriptConfig": true,
+    "hasLintScript": true,
+    "hasBuildScript": true,
+    "hasStartScript": true,
+    "hasDevScript": true,
+    "hasDockerfile": true,
+    "hasDeploymentDocs": true,
+    "hasCiWorkflow": false,
+    "hasWorkspaceConfig": false,
+    "hasRootLockfile": true
+  },
+  "securitySignals": {
+    "envFilesDetected": [
+      ".env"
+    ],
+    "envIgnoredInGitignore": true,
+    "envRiskWarning": false,
+    "possibleHardcodedSecrets": []
+  },
+  "healthScore": 91,
+  "healthBreakdown": {
+    "documentation": 20,
+    "structure": 20,
+    "security": 16,
+    "testing": 13,
+    "deploymentReadiness": 13,
+    "aiReadiness": 9
+  },
+  "improvementItems": [
+    {
+      "id": "RR-001",
+      "title": "Add .dockerignore",
+      "category": "deployment",
+      "severity": "warning",
+      "effort": "low",
+      "impact": "medium",
+      "source": "deployment detection",
+      "problem": "A Dockerfile exists but .dockerignore is missing. Build contexts can include node_modules, secrets, or local caches, making images larger and less secure.",
+      "recommendedFix": "Add .dockerignore that excludes node_modules, .env, .git, build output, and local caches.",
+      "acceptanceCriteria": [
+        ".dockerignore exists",
+        "node_modules and local build artifacts are excluded",
+        ".env files are excluded"
+      ],
+      "suggestedFiles": [
+        ".dockerignore"
+      ],
+      "relatedFacts": [
+        "hasDockerfile: true",
+        "hasDockerIgnore: false"
+      ],
+      "safeForAgent": true
+    },
+    {
+      "id": "RR-002",
+      "title": "Review high fan-out file: server/index.ts",
+      "category": "architecture",
+      "severity": "info",
+      "effort": "high",
+      "impact": "medium",
+      "source": "dependency graph",
+      "problem": "The file server/index.ts imports from 1 other internal files, which may indicate it has too many responsibilities.",
+      "recommendedFix": "Consider extracting cohesive groups of imports into separate modules or introducing an intermediate layer. Do not refactor unless behavior is well tested.",
+      "acceptanceCriteria": [
+        "Responsibilities are clearly separated or documented",
+        "Tests pass after any refactoring"
+      ],
+      "suggestedFiles": [
+        "server/index.ts"
+      ],
+      "relatedFacts": [
+        "fanOut: 1"
+      ],
+      "safeForAgent": false
+    }
+  ],
+  "healthDetails": {
+    "maxScore": 100,
+    "categoryMaxScores": {
+      "documentation": 20,
+      "structure": 20,
+      "security": 20,
+      "testing": 15,
+      "deploymentReadiness": 15,
+      "aiReadiness": 10
+    },
+    "penalties": [
+      {
+        "category": "security",
+        "pointsLost": 2,
+        "reason": "Runtime env files exist and require handling discipline.",
+        "recommendedFix": "Keep env files ignored and document required variables through .env.example."
+      },
+      {
+        "category": "security",
+        "pointsLost": 2,
+        "reason": "Dockerfile exists without .dockerignore protection.",
+        "recommendedFix": "Add .dockerignore to avoid leaking large, noisy, or sensitive local files into build context."
+      },
+      {
+        "category": "testing",
+        "pointsLost": 2,
+        "reason": "No CI workflow was detected.",
+        "recommendedFix": "Add CI automation such as GitHub Actions to run tests consistently."
+      },
+      {
+        "category": "deploymentReadiness",
+        "pointsLost": 2,
+        "reason": "No CI/CD workflow was detected.",
+        "recommendedFix": "Add CI workflows for build, test, or release automation."
+      },
+      {
+        "category": "aiReadiness",
+        "pointsLost": 1,
+        "reason": "Open repo issues reduce autonomous task confidence.",
+        "recommendedFix": "Address the highest-priority issues before adding AI workflows."
+      }
+    ]
+  },
+  "issues": [
+    "Dockerfile detected without .dockerignore."
+  ],
+  "recommendedNextSteps": [
+    "Add .dockerignore so Docker builds exclude local dependencies, secrets, and generated files.",
+    "Add .dockerignore to exclude node_modules, build output, secrets, and local caches from Docker builds."
+  ]
+}

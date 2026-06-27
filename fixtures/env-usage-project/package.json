@@ -1,0 +1,8 @@
+{
+  "name": "env-usage-project",
+  "private": true,
+  "scripts": {
+    "start": "node src/index.ts"
+  }
+}
+

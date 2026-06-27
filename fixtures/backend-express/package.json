@@ -1,0 +1,17 @@
+{
+  "name": "backend-express",
+  "private": true,
+  "scripts": {
+    "dev": "node server/index.js",
+    "build": "tsc -p tsconfig.json",
+    "start": "node server/index.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
+

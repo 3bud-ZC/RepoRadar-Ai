@@ -1,0 +1,42 @@
+# Portfolio Case Study: sample-project
+
+## Problem
+
+Repositories often contain valuable context, but it is fragmented across code, configuration, scripts, and lightweight docs. That slows onboarding, audits, and AI-assisted workflows.
+
+## Solution
+
+RepoRadar AI scanned the repository deterministically, classified it as a full-stack-app, and generated reusable outputs for architecture, tech stack, security review, README drafting, and AI-agent onboarding.
+
+## Tech Stack
+
+- Docker
+- ESLint
+- Express
+- Jest
+- Playwright
+- PostgreSQL
+- Prettier
+- Prisma
+- React
+- Tailwind CSS
+- Vite
+- Vitest
+
+## Features
+
+- Deterministic repo scanning with no paid AI requirement
+- Project type classification and stack detection
+- Explainable health scoring with lost-point reasons
+- Safe security reporting that avoids exposing secret values
+
+## Engineering Highlights
+
+- Health score generated: 91/100
+- Files scanned: 15
+- Important config files detected: package.json, package-lock.json, tsconfig.json, vite.config.ts, Dockerfile, prisma/schema.prisma
+
+## Next Improvements
+
+- Add .dockerignore so Docker builds exclude local dependencies, secrets, and generated files.
+- Add .dockerignore to exclude node_modules, build output, secrets, and local caches from Docker builds.

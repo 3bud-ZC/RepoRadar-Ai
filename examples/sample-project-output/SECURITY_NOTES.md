@@ -1,0 +1,30 @@
+# Security Notes: sample-project
+
+## Severity Summary
+
+- Low: env files are present and appear to be ignored; continue documenting required variables through `.env.example`.
+
+## Environment File Handling
+
+- Detected env-style files: .env
+- Env protected by .gitignore: yes
+- Env variable names referenced in code: none
+- RepoRadar AI detects env files by name only and does not print their contents.
+
+## Config And Scan Safety Notes
+
+- Config detected: no
+- Config warnings: none
+- Scan truncated: no
+- Skipped files: 2
+- Skipped folders: 1
+
+## Potential Secret Findings
+
+No hardcoded secret patterns were detected by the current heuristic rules.
+
+## Recommended Remediation
+
+- Keep `.env` files ignored and document variables through `.env.example`.
+- Review all flagged files manually before rotating credentials or refactoring secret handling.
+- Prefer environment variables or secret managers over inline values in code or config.

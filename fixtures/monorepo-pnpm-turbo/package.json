@@ -1,0 +1,9 @@
+{
+  "name": "monorepo-pnpm-turbo",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "test": "turbo run test"
+  }
+}
+

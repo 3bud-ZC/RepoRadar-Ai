@@ -1,0 +1,8 @@
+{
+  "name": "prisma-project",
+  "private": true,
+  "dependencies": {
+    "prisma": "^5.16.0"
+  }
+}
+

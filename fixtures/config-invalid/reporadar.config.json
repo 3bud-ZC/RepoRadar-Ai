@@ -1,0 +1,9 @@
+{
+  "projectName": 42,
+  "include": "src/**",
+  "exclude": ["src/generated/**", 10],
+  "maxFiles": "many",
+  "maxFileSizeKb": -5,
+  "reports": "all",
+  "outputDir": "../outside"
+}

@@ -1,0 +1,24 @@
+export function section(title: string, body: string): string {
+  return `## ${title}\n\n${body.trim()}\n`;
+}
+
+export function bulletList(items: string[]): string {
+  if (items.length === 0) {
+    return "- None";
+  }
+
+  return items.map((item) => `- ${item}`).join("\n");
+}
+
+export function formatKeyValueTable(entries: Array<[string, string]>): string {
+  const rows = entries.map(([key, value]) => `| ${key} | ${value} |`).join("\n");
+  return `| Key | Value |\n| --- | --- |\n${rows}`;
+}
+
+export function orderedList(items: string[]): string {
+  if (items.length === 0) {
+    return "1. None";
+  }
+
+  return items.map((item, index) => `${index + 1}. ${item}`).join("\n");
+}
