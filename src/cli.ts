@@ -127,7 +127,11 @@ export function runCli(argv = process.argv): Promise<void> {
   program
     .name("reporadar")
     .description("Deterministic repository intelligence scanner for demo-ready project reports")
-    .version(loadCliVersion());
+    .version(loadCliVersion())
+    .addHelpText(
+      "after",
+      "\nRepoRadar AI — Built by Abed for abud.fun\nhttps://github.com/3bud-ZC/RepoRadar-Ai",
+    );
 
   program.configureOutput({
     writeOut: (output) => {

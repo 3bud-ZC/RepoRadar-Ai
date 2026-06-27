@@ -4,6 +4,7 @@ All notable changes to RepoRadar AI are tracked here.
 
 ## Unreleased
 
+- Added abud.fun ownership and attribution: LICENSE, README Author & Ownership section, CLI help footer, generated report footer, package.json metadata updated.
 - Phase 3B desktop shortcut and interactive launcher.
 
 ## Phase 3B

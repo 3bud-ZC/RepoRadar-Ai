@@ -47,3 +47,7 @@ node dist/cli.js scan ./sample-project --json
 - Resize terminal to ~100 columns so lines do not wrap
 - Hide personal prompts if they contain machine names or paths
 - Sanitize any accidental absolute paths in output before sharing
+
+---
+
+Built by **Abed** for **abud.fun** — https://github.com/3bud-ZC/RepoRadar-Ai

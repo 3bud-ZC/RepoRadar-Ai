@@ -63,8 +63,8 @@ node dist/cli.js --version
 ### Install And Test
 
 ```bash
-git clone https://github.com/abud/reporadar-ai.git
-cd reporadar-ai
+git clone https://github.com/3bud-ZC/RepoRadar-Ai.git
+cd RepoRadar-Ai
 npm install
 npm run validate
 node dist/cli.js scan ./sample-project
@@ -87,3 +87,7 @@ node dist/cli.js scan ./sample-project
 - Deeper package-manager-specific resolution
 - More edge-case route coverage
 - Optional local AI summaries (future, not required)
+
+---
+
+Built by **Abed** for **abud.fun** — https://github.com/3bud-ZC/RepoRadar-Ai

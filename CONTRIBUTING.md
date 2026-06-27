@@ -54,3 +54,7 @@ npm run examples:refresh
 - Add or update Vitest coverage under `tests/`.
 - Keep previous tests green when expanding scanner behavior.
 - If a new CLI surface is added, add both happy-path and safety-path tests when practical.
+
+---
+
+Built by **Abed** for **abud.fun** — https://github.com/3bud-ZC/RepoRadar-Ai

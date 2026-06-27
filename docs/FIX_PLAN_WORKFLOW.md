@@ -102,3 +102,7 @@ Add this to `reporadar.config.json` to disable any output:
 ```
 
 All report toggles default to `true`.
+
+---
+
+Built by **Abed** for **abud.fun** — https://github.com/3bud-ZC/RepoRadar-Ai

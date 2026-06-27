@@ -318,7 +318,17 @@ See [CHANGELOG.md](CHANGELOG.md) for version history.
 
 ---
 
+## Author & Ownership
+
+RepoRadar AI is built and maintained by **Abed** for **abud.fun**.
+
+- Website: [abud.fun](https://abud.fun)
+- GitHub: [@3bud-ZC](https://github.com/3bud-ZC)
+- Repository: [RepoRadar AI](https://github.com/3bud-ZC/RepoRadar-Ai)
+
+---
+
 ## License
 
-MIT
+Released under the MIT License. See [LICENSE](LICENSE).
 

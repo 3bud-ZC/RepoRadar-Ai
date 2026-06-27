@@ -117,3 +117,7 @@ Or right-click it and choose Delete.
 - The Windows folder picker is only available when running on Windows with PowerShell.
 - The interactive menu requires a terminal with stdin support. It will not work in non-interactive environments like CI pipelines.
 - Opening files uses the OS default application. If no default application is set for `.md` files, the OS may prompt you to choose one.
+
+---
+
+Built by **Abed** for **abud.fun** — https://github.com/3bud-ZC/RepoRadar-Ai

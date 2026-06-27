@@ -29,7 +29,7 @@ npm run pack:dry-run
 
 ## GitHub Repo Setup
 
-- [ ] Create repository at `https://github.com/abud/reporadar-ai`
+- [ ] Create repository at `https://github.com/3bud-ZC/RepoRadar-Ai`
 - [ ] Push all code (do not push `node_modules/`, `dist/`, `.env`, or `coverage/`)
 - [ ] Add GitHub topics: `cli`, `developer-tools`, `repository-scanner`, `static-analysis`, `architecture`, `typescript`, `code-analysis`, `repo-health`
 - [ ] Enable Issues tab
@@ -65,3 +65,7 @@ npm run pack:dry-run
 - [ ] Post launch announcement on LinkedIn (see `docs/LINKEDIN_POST.md`)
 - [ ] Monitor first issues for typos or broken links
 - [ ] Star and watch the repo for community signals
+
+---
+
+Built by **Abed** for **abud.fun** — https://github.com/3bud-ZC/RepoRadar-Ai
