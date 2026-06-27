@@ -136,8 +136,25 @@ npm run shortcut:windows
 - **No secrets committed:** .env excluded, no API keys in source
 - **README.md:** polished with badges, professional sections, demo placeholder, full CLI table, all 13 outputs documented
 
+## abud.fun Ownership & Attribution
+
+- **Author display name:** Abed
+- **Brand/site:** abud.fun
+- **GitHub username:** 3bud-ZC
+- **Repository:** https://github.com/3bud-ZC/RepoRadar-Ai
+- **Attribution commit:** `3293a5dcda49b26bdded2aa2f2983a0d2081c2a8` — Add abud.fun ownership and attribution
+- **LICENSE:** MIT License with `Copyright (c) 2026 Abed — abud.fun`
+- **README.md:** Added Author & Ownership section with website, GitHub, and repository links
+- **package.json:** Author updated to `Abed — abud.fun`, repository/bugs/homepage URLs updated to `3bud-ZC/RepoRadar-Ai`
+- **CLI help:** Footer added — `RepoRadar AI — Built by Abed for abud.fun` + GitHub URL
+- **Generated reports footer:** Centralized `appendGeneratedByFooter()` in `src/utils/markdown.ts` applied to all 12 Markdown outputs (not repo-facts.json)
+- **Docs updated:** CONTRIBUTING.md, CHANGELOG.md, GITHUB_RELEASE_NOTES.md, LAUNCH_CHECKLIST.md, DEMO_RECORDING_GUIDE.md, DESKTOP_LAUNCHER.md, FIX_PLAN_WORKFLOW.md
+- **Examples refreshed:** All example Markdown reports include the new footer; repo-facts.json does not
+- **Tests added:** `tests/attribution.spec.ts` with 7 assertions covering package.json, LICENSE, README, generated reports, repo-facts.json exclusion, CLI help, and single STATUS.md rule
+- **Tests updated:** `tests/release-readiness.spec.ts` updated for new author field
+- **Validation:** all passed (typecheck, build, 71 tests, pack dry-run)
+
 ## Recommended Next Step
 
 1. Add a real demo GIF/screenshot to `docs/assets/demo.gif`.
 2. Publish a LinkedIn launch post linking to the repository.
-3. Run RepoRadar AI on a real project, open FIX_PLAN.md, then use GITHUB_ISSUES.md or AGENT_FIX_PROMPT.md to start improving that project.
